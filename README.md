@@ -1,4 +1,7 @@
 # ![Pathfinder logo](favicon/favicon-32x32.png "Logo") *PATHFINDER*
+
+#### Forked from samoneilll/pathfinder due to inactivity on exodus4d/pathfinder ####
+
 #### Mapping tool for [*EVE ONLINE*](https://www.eveonline.com)
 
 - Project URL [https://www.pathfinder-w.space](https://www.pathfinder-w.space)
