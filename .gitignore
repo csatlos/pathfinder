@@ -44,6 +44,13 @@ Temporary Items
 .apdisk
 
 # ========================
+# development environment
+# ========================
+.buildpath
+.project
+/.settings
+
+# ========================
 # project files
 # ========================
 .idea
@@ -51,8 +58,6 @@ Temporary Items
 *.gz
 composer-dev.lock
 package-lock.json
-/conf/
 /node_modules/
 /public/js/vX.X.X/
 /vendor/
-/history/
