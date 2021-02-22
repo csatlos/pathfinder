@@ -2366,6 +2366,9 @@ define([
     let getAreaIdBySecurity = security => {
         let areaId = 0;
         switch(security){
+            case 'T':
+                areaId = 25;
+                break;
             case 'H':
                 areaId = 30;
                 break;
@@ -2748,7 +2751,7 @@ define([
      * get signature 'type' options for a systemTypeId
      * -> areaIds is array! This is used for "Shattered WHs" where e.g.:
      *    Combat/Relic/.. sites from multiple areaIds (C1, C2, C3) can spawn in a C2,...
-     * @param systemTypeId  1 == w-space; 2 == k-space; 3 == a-space
+     * @param systemTypeId  1 == w-space; 2 == k-space; 3 == a-space; 4 == t-space
      * @param areaIds       1 == c1; 2 == c2; 12 == Thera; 13 == Shattered Frig;...
      * @param sigGroupId    1 == Combat; 2 == Relic; 3 == Data; ...
      * @returns {{}}

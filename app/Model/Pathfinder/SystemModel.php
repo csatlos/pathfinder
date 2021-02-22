@@ -717,6 +717,14 @@ class SystemModel extends AbstractMapTrackingModel {
     public function isAbyss() : bool {
         return ($this->typeId->id === 3 && $this->security === 'A');
     }
+    
+    /**
+     * check whether this system is in t-space
+     * @return bool
+     */
+    public function isTriglavian() : bool {
+        return ($this->typeId->id === 4 && $this->security === 'T');
+    }
 
     /**
      * check whether this system is in drifter-space
@@ -795,6 +803,9 @@ class SystemModel extends AbstractMapTrackingModel {
             case 'L':
             case '0.0':
                 $typeId = 2; // k-space
+                break;
+            case 'T':
+                $typeId = 4; // t-space
                 break;
             case 'A':
                 $typeId = 3; // a-space

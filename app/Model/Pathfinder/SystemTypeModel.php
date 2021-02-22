@@ -49,6 +49,10 @@ class SystemTypeModel extends AbstractPathfinderModel {
         [
             'id' => 3,
             'name' => 'a-space'     // Abyss Space
+        ],
+        [
+            'id' => 4,
+            'name' => 't-space'     // Triglavian Space
         ]
     ];
 

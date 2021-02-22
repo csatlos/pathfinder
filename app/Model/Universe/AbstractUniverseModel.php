@@ -179,6 +179,8 @@ abstract class AbstractUniverseModel extends AbstractModel {
             ($id >= 12 && $id <= 18)
         ){
             $security = 'C' . $id;
+        }elseif($id == 25){
+            $security = 'T';
         }elseif($id == 7){
             $security = 'H';
         }elseif($id == 8){
