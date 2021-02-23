@@ -6,8 +6,8 @@ INSERT INTO `region` VALUES
 
 # Add the new Pochven constellations
 INSERT INTO `constellation` VALUES
-(20000787, '2019-01-01 07:10:54', '2019-01-01 07:10:54', 'Perun', 10000070, -1.62832101952226e17, 5.06566811280612e16, 1.03886924951039e17),
-(20000789, '2019-01-01 07:10:54', '2019-01-01 07:10:54', 'Veles', 10000070, -1.6393375393592e17, 5.63776884101948e16, 7.13269711209869e16),
+(20000787, '2019-01-01 07:10:54', '2019-01-01 07:10:54', 'Krai Perun', 10000070, -1.62832101952226e17, 5.06566811280612e16, 1.03886924951039e17),
+(20000789, '2019-01-01 07:10:54', '2019-01-01 07:10:54', 'Krai Veles', 10000070, -1.6393375393592e17, 5.63776884101948e16, 7.13269711209869e16),
 (20000788, '2019-01-01 07:10:54', '2019-01-01 07:10:54', 'Krai Svarog', 10000070, -1.09497929445299e17, 4.56773536796065e16, 2.0441554643762e16);
 
 # Add the new faction defintions
@@ -16,11 +16,16 @@ INSERT INTO `faction` VALUES
 (500025, '2019-01-01 07:58:30', '2019-01-01 07:58:30', 'Rogue Drones', 'While rogues drones come in all shapes, sizes and even personalities, the signs are that they do not exist in a unified collective. Much like their accidental creators, the rogue drones can be found co-operating locally, and even in relatively large and widespread \'hive minds\', but they will readily attack and recycle drones from competing hives.', 0, 0, 0),
 (500027, '2019-01-01 07:58:30', '2019-01-01 07:58:30', 'EDENCOM', 'EDENCOM is the New Eden Common Defense Initiative, a semi-autonomous military command set up by CONCORD and the \"Big 4\" core empires to aggressively prosecute the war against the Triglavian Collective\'s invasion forces in YC122. With access to massive financial resources from the New Eden Defense Fund, EDENCOM organizes the fortification of threatened systems and the defense of New Eden by fleets and troops drawn from CONCORD and the empires.', 5, 0, 0);
 
+# UPDATE the Pochven systems with the appropriate constellation.
+UPDATE `system` SET `constellationId` = 20000787 WHERE `id` IN (30000157,30000192,30001372,30001445,30002079,30002737,30005005,30010141,30031392);
+UPDATE `system` SET `constellationId` = 20000788 WHERE `id` IN (30000021,30001413,30002225,30002411,30002770,30003495,30003504,30040141,30045328);
+UPDATE `system` SET `constellationId` = 20000789 WHERE `id` IN (30000206,30001381,30002652,30002702,30002797,30003046,30005029,30020141,30045329);
+
 # UPDATE the Pochven systems with the appropriate security and marked as 'T' class. Using UPDATE ensures child planets are preserved
 UPDATE `system` 
 SET `security` = 'T',
-	`trueSec` = -1.0,
-	`securityStatus` = -1.000000
+    `trueSec` = -1.0,
+    `securityStatus` = -1.000000
 WHERE id in (30000157,30000192,30001372,30001445,30002079,30002737,30005005,30010141,30031392,30000021,30001413,30002225,30002411,30002770,30003495,30003504,30040141,30045328,30000206,30001381,30002652,30002702,30002797,30003046,30005029,30020141,30045329);
 
 # Delete the stargates that go to/from Pochven systems
